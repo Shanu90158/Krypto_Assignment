@@ -1,5 +1,5 @@
 # Krypto_Assignment
-## a price alert application that triggers an email when the user’s target price is achieved.
+## Price alert programme that notifies the user an email when their specified price is reached.
 <h3> By Shah Nawaj Khan </h3> 
 
 <hr>
