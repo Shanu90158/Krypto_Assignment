@@ -3,7 +3,7 @@
 <h3> By Shah Nawaj Khan </h3> 
 
 <hr>
-Repository consists for 4 files:
+Repository consists of 4 files:
   <ol>
   <li> KryptoAlert.py
   <li> Market.py
