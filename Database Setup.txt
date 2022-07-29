@@ -1,0 +1,58 @@
+
+CREATE TABLE public.alert
+(
+    uid integer NOT NULL,
+    aid integer NOT NULL,
+    price bigint NOT NULL,
+    status boolean,
+    alerttime time without time zone,
+    coinid character varying(20) COLLATE pg_catalog."default",
+    CONSTRAINT alert_pkey PRIMARY KEY (aid)
+)
+
+
+TABLESPACE pg_default;
+ALTER TABLE public.alert
+    OWNER to postgres;
+
+
+CREATE TABLE public.userdata
+(
+    uid integer NOT NULL,
+    username character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT userdata_pkey PRIMARY KEY (uid)
+)
+
+
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.userdata
+    OWNER to postgres;
+    
+    
+    
+    
+    COMMENT ON TABLE public.userdata
+    IS 'user data (Kypto)';
+
+
+
+CREATE TABLE public.alertq
+(
+    uid integer,
+    aid integer,
+    price bigint,
+    email character varying COLLATE pg_catalog."default"
+)
+
+INSERT INTO public.alert(
+	uid, aid, price, status, alerttime, coinid)
+	VALUES (0, 100, 0, false, now(), 'BTC');
+    
+    
+    
+    
+    
